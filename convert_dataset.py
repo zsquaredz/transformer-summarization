@@ -13,15 +13,15 @@ def convert_txt_to_tsv(file_article, file_summary, file_output):
 
 if __name__ == '__main__':
     print('starting to convert')
-    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/train.source',
-                       '/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/train.target',
+    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/data/cnndm_xsum/train.source',
+                       '/disk/ocean/zheng/A_distance/data/cnndm_xsum/train.target',
                        'dataset/cnndm_xsum/train.tsv')
     print('training done')
-    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/val.source',
-                       '/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/val.target',
+    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/data/cnndm_xsum/val.source',
+                       '/disk/ocean/zheng/A_distance/data/cnndm_xsum/val.target',
                        'dataset/cnndm_xsum/val.tsv')
     print('val done')
-    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/test.source',
-                       '/disk/ocean/zheng/A_distance/dataset/cnndm_xsum/test.target',
+    convert_txt_to_tsv('/disk/ocean/zheng/A_distance/data/cnndm_xsum/test.source',
+                       '/disk/ocean/zheng/A_distance/data/cnndm_xsum/test.target',
                        'dataset/cnndm_xsum/test.tsv')
     print('test done')
