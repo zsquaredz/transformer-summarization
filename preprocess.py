@@ -16,12 +16,12 @@ description = 'Preprocessor for summarization dataset. Include unsupervised text
 
 parser = argparse.ArgumentParser(description=description, formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-parser.add_argument('--dataset', metavar='DIR', type=str, default='./dataset', help='dataset directory')
+parser.add_argument('--dataset', metavar='DIR', type=str, default='dataset/', help='dataset directory')
 parser.add_argument('--vocab_size', metavar='V', type=int, default=25000, help='vocabulary size')
-parser.add_argument('--emb_size', metavar='E', type=int, default=250, help='embedding size')
-parser.add_argument('--workers', metavar='WS', type=int, default=3, help='number of cpu cores, uses for training')
+parser.add_argument('--emb_size', metavar='E', type=int, default=512, help='embedding size')
+parser.add_argument('--workers', metavar='WS', type=int, default=4, help='number of cpu cores, uses for training')
 parser.add_argument('--sg', action='store_true', help='use skip-gram for training word2vec')
-parser.add_argument('--prefix', metavar='P', type=str, default='simple-summ', help='model prefix')
+parser.add_argument('--prefix', metavar='P', type=str, default='transformer-summ', help='model prefix')
 
 args = parser.parse_args()
 

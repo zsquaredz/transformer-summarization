@@ -37,7 +37,7 @@ parser.add_argument('--sample_interval', metavar='S', type=int, default=100, hel
 parser.add_argument('--train_interval', metavar='TL', type=int, default=10, help='train log interval')
 parser.add_argument('--train_sample_interval', metavar='TS', type=int, default=100, help='train sample interval')
 parser.add_argument('--log', metavar='L', type=str, default='logs/', help='logs directory')
-parser.add_argument('--prefix', metavar='TP', type=str, default='default-summ', help='model prefix')
+parser.add_argument('--prefix', metavar='TP', type=str, default='transformer-summ', help='model prefix')
 
 args = parser.parse_args()
 
