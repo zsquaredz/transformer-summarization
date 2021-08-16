@@ -8,6 +8,7 @@ def convert_txt_to_tsv(file_article, file_summary, file_output):
         line_summary = f_summary.readline()
         while line_article and line_summary:
             f_out.write(line_article.strip()+'\t'+line_summary.strip())
+            f_out.write('\n')
             line_article = f_article.readline()
             line_summary = f_summary.readline()
 
