@@ -18,7 +18,7 @@ epilog = 'Model training can be performed in two modes: with pretrained embeddin
 
 parser = argparse.ArgumentParser(description=description, epilog=epilog,
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--dataset', metavar='DIR', type=str, default='./dataset', help='dataset directory')
+parser.add_argument('--dataset', metavar='DIR', type=str, default='dataset/', help='dataset directory')
 parser.add_argument('--cuda', action='store_true', help='whether to use cuda')
 parser.add_argument('--vocab_size', metavar='V', type=int, default=25000, help='vocabulary size')
 parser.add_argument('--pretrain_emb', action='store_true', help='use pretrained embeddings')
@@ -36,8 +36,8 @@ parser.add_argument('--test_interval', metavar='T', type=int, default=100, help=
 parser.add_argument('--sample_interval', metavar='S', type=int, default=100, help='the sample interval')
 parser.add_argument('--train_interval', metavar='TL', type=int, default=10, help='train log interval')
 parser.add_argument('--train_sample_interval', metavar='TS', type=int, default=100, help='train sample interval')
-parser.add_argument('--log', metavar='L', type=str, default='./logs', help='logs directory')
-parser.add_argument('--prefix', metavar='TP', type=str, default='simple-summ', help='model prefix')
+parser.add_argument('--log', metavar='L', type=str, default='logs/', help='logs directory')
+parser.add_argument('--prefix', metavar='TP', type=str, default='default-summ', help='model prefix')
 
 args = parser.parse_args()
 
