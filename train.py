@@ -67,7 +67,7 @@ if torch.cuda.is_available():
         logging.info('You have a CUDA device, so you should probably run with --cuda')
 else:
     if args.cuda:
-        logging.warninig('You have no CUDA device. Start learning on CPU.')
+        logging.warning('You have no CUDA device. Start learning on CPU.')
 
 device = torch.device("cuda" if args.cuda and torch.cuda.is_available() else "cpu")
 writer = SummaryWriter(os.path.join(args.log, args.prefix))
