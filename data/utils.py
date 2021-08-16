@@ -36,7 +36,7 @@ def export_embeddings(filename, sp_model, w2v_model):
     """
     dim = w2v_model.vector_size
     vocab_size = len(sp_model)
-    table = np.array([w2v_model[str(i)] if str(i) in w2v_model.wv else np.zeros([dim]) for i in range(vocab_size)])
+    table = np.array([w2v_model.wv[str(i)] if str(i) in w2v_model.wv else np.zeros([dim]) for i in range(vocab_size)])
     np.save(filename, table)
 
 
