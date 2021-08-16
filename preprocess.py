@@ -38,7 +38,7 @@ for path in [sp_model_filename, w2v_model_filename, embeddings_filename]:
 # Start tokenization training:
 spm_params = '--pad_id=0 --unk_id=1 --bos_id=2 --eos_id=3 ' \
              '--input={} --model_prefix={} --vocab_size={} --max_sentence_length={}'.format(train_filename, sp_model_prefix, args.vocab_size, 5000)
-spm.SentencePieceTrainer.Train(spm_params)
+# spm.SentencePieceTrainer.Train(spm_params)
 
 # Load trained sentencepice model:
 sp = spm.SentencePieceProcessor()
@@ -46,8 +46,9 @@ sp.load(sp_model_filename)
 
 # Next, train word2vec embeddings:
 sentences = SequentialSentenceLoader(train_filename, sp)
-w2v_model = Word2Vec(sentences, min_count=0, workers=args.workers, vector_size=args.emb_size, sg=int(args.sg))
-w2v_model.save(w2v_model_filename)
+# w2v_model = Word2Vec(sentences, min_count=0, workers=args.workers, vector_size=args.emb_size, sg=int(args.sg))
+# w2v_model.save(w2v_model_filename)
+w2v_model = Word2Vec.load(w2v_model_filename)
 
 # Export embeddings into lookup table:
 export_embeddings(embeddings_filename, sp, w2v_model)
