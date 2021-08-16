@@ -5,7 +5,7 @@ from nn import Transformer
 
 
 class TransformerSummarizer(nn.Module):
-    def __init__(self, max_seq_len, vocab_size, initial_idx=2, embedding_weights=None, n_layers=6, emb_size=250,
+    def __init__(self, max_seq_len, vocab_size, initial_idx=2, embedding_weights=None, n_layers=6, emb_size=512,
                  dim_m=512, n_heads=8, dim_i=2048, dropout=0.1):
         """Pure transformer model for summarization task. Actually, it's possible to use this model for MT task.
 
