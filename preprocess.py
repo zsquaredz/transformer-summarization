@@ -36,8 +36,8 @@ for path in [sp_model_filename, w2v_model_filename, embeddings_filename]:
     os.makedirs(os.path.dirname(path), exist_ok=True)
 
 # Start tokenization training:
-spm_params = '--pad_id=0 --unk_id=1 --bos_id=2 --eos_id=3 --max_sentence_length=5000' \
-             '--input={} --model_prefix={} --vocab_size={}'.format(train_filename, sp_model_prefix, args.vocab_size)
+spm_params = '--pad_id=0 --unk_id=1 --bos_id=2 --eos_id=3 ' \
+             '--input={} --model_prefix={} --vocab_size={} --max_sentence_length={}'.format(train_filename, sp_model_prefix, args.vocab_size, 5000)
 spm.SentencePieceTrainer.Train(spm_params)
 
 # Load trained sentencepice model:
