@@ -22,7 +22,7 @@ parser.add_argument('--dataset', metavar='DIR', type=str, default='dataset/', he
 parser.add_argument('--cuda', action='store_true', help='whether to use cuda')
 parser.add_argument('--vocab_size', metavar='V', type=int, default=25000, help='vocabulary size')
 parser.add_argument('--pretrain_emb', action='store_true', help='use pretrained embeddings')
-parser.add_argument('--emb_size', metavar='E', type=int, default=250, help='embedding size')
+parser.add_argument('--emb_size', metavar='E', type=int, default=512, help='embedding size')
 parser.add_argument('--model_dim', metavar='MD', type=int, default=512, help='dimension of the model')
 parser.add_argument('--n_layers', metavar='NL', type=int, default=1, help='number of transformer layers')
 parser.add_argument('--n_heads', metavar='NH', type=int, default=8, help='number of attention heads')
