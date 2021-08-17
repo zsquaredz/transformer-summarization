@@ -72,6 +72,7 @@ else:
 device = torch.device("cuda" if args.cuda and torch.cuda.is_available() else "cpu")
 writer = SummaryWriter(os.path.join(args.log, args.prefix))
 
+
 logging.info('Loading dataset')
 loader = DataLoader(args.dataset, ['train', 'test'], ['src', 'trg'], bpe_model_filename)
 logging.info('Dataset has been loaded. Total size: %s', loader.part_lens)

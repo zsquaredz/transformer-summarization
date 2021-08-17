@@ -1,11 +1,12 @@
 import csv
 import os
+import sys
 
 import numpy as np
 import sentencepiece as spm
 import torch
 
-
+csv.field_size_limit(sys.maxsize)
 class DataLoader:
     def __init__(self, directory, parts, cols, spm_filename):
         """Dataset loader.
